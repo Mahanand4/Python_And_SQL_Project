@@ -1,4 +1,4 @@
-#Python_And_SQL_Project
+# Python_And_SQL_Project
 SQL and Python data analysis project using MySQL, Pandas, and Matplotlib to analyze customer, order, payment, and product data.
 ## Project Overview
 This project analyzes customer, order, payment, seller, and product data using SQL and Python to identify business trends and generate meaningful insights.
