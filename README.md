@@ -267,4 +267,4 @@ This project demonstrates practical experience with:
 2. SQL supports structured querying and advanced business calculations, while Python enables data preparation, exploratory analysis, customer segmentation, RFM scoring, cohort analysis, and visualization.
 3. Together, these techniques provide a foundation for data-driven decision-making and demonstrate practical data analytics skills relevant to business and e-commerce environments.
 
-# GitHub Repository Link: 
+# GitHub Repository Link: https://github.com/Mahanand4/Python_And_SQL_Project/blob/main/README.md
