@@ -1,44 +1,266 @@
-# Python_And_SQL_Project
-SQL and Python data analysis project using MySQL, Pandas, and Matplotlib to analyze customer, order, payment, and product data.
+## Python & SQL Project
+
 ## Project Overview
-This project analyzes customer, order, payment, seller, and product data using SQL and Python to identify business trends and generate meaningful insights.
+This project focuses on analyzing e-commerce data using SQL and Python to uncover insights into customer behavior, sales performance, product categories, payment methods, seller performance, delivery operations, and customer retention.The project combines SQL-based business analysis with Python-based data cleaning, exploratory data analysis (EDA), customer segmentation, RFM analysis, cohort retention analysis, and data visualization.The analysis uses multiple interconnected datasets, including customers, orders, order items, payments, products, and sellers.
 
-## Tools & Technologies
-- SQL
-- MySQL Workbench
-- Python
-- Pandas
-- Matplotlib
-- Google Colab
+## Business Problem
+E-commerce businesses generate large volumes of data across customers, orders, products, payments, and deliveries. Analyzing these datasets together helps businesses understand purchasing patterns, identify high-performing product categories, evaluate operational performance, and improve customer relationships.
 
-## Dataset
-The project uses multiple datasets including:
-- Customers
-- Sellers
-- Orders
-- Order Items
-- Payments
-- Products
-- Geolocation
+## Business Objectives
+1. Analyze customer locations and purchasing patterns.
+2. Evaluate order volume and monthly sales trends.
+3. Calculate revenue by product category and seller.
+4. Understand payment methods and installment-based payments.
+5. Analyze product prices and purchase frequency.
+6. Evaluate order status and delivery performance.
+7. Rank customers and sellers using analytical SQL functions.
+8. Perform customer segmentation based on purchasing frequency.
+9. Conduct Recency, Frequency, and Monetary (RFM) analysis.
+10. Analyze customer retention using cohort analysis.
+11. Identify opportunities to improve customer loyalty, repeat purchases, and business performance.
+    
+   ## Dataset 
 
-## Project Workflow
-1. Explored and prepared the datasets.
-2. Used SQL queries to analyze business metrics.
-3. Used Python and Pandas for data analysis.
-4. Created visualizations using Matplotlib.
-5. Identified key business insights and trends.
+The project uses six interconnected datasets.
 
-## Key Insights
-- Delivered orders account for the majority of orders.
-- Credit card is the most commonly used payment method, followed by UPI.
-- Bed & Bath has the highest number of products among the top 10 categories.
-- SQL analysis was used to identify customer, order, seller, and revenue patterns.
-- Python was used to transform data and create meaningful visualizations.
+| Dataset | Number of Records | Description |
+|---|---:|---|
+| Customers | 99,441 | Customer identifiers, locations, cities, and states |
+| Orders | 99,441 | Order details, order status, purchase timestamps, and delivery dates |
+| Order Items | 112,650 | Product-level order details, seller IDs, prices, and freight values |
+| Payments | 103,886 | Payment methods, installment counts, and payment values |
+| Products | 32,951 | Product identifiers, categories, and product attributes |
+| Sellers | 3,095 | Seller identifiers and geographical information |
 
-## Project Deliverables
-- SQL queries
-- Python/Google Colab notebook
-- Project presentation
-- Project documentation
+## 5. Tools and Technologies
+
+- **SQL / MySQL Workbench:** Data querying, joins, aggregations, ranking, CTEs, and analytical calculations.
+- **Python:** Data analysis and business calculations.
+- **Pandas:** Data cleaning, transformation, merging, grouping, and aggregation.
+- **Matplotlib:** Data visualization.
+- **Seaborn:** Statistical visualizations and retention heatmaps.
+- **Google Colab:** Python notebook execution and analysis.
+- **Excel and CSV files:** Source data.
+- 
+## Data Preparation 
+- Loaded customer, order, order-item, payment, product, and seller datasets.
+- Inspected dataset dimensions and column names.
+- Checked missing values across datasets.
+- Checked for duplicate records.
+- Converted date columns into datetime format.
+- Prepared data for joins, aggregations, and time-based analysis.
+- Integrated related datasets using identifiers such as customer ID, order ID, product ID, and seller ID.
+  
+## SQL Analysis
+SQL was used to answer business questions at basic, intermediate, and advanced levels.
+
+# Basic SQL Questions
+1. List all unique cities where customers are located.
+2. Count the number of orders placed in 2017.
+3. Calculate total sales for each product category.
+4. Calculate the percentage of orders paid in installments.
+5. Count the number of customers from each state.
+6. SQL concepts used: SELECT, DISTINCT, WHERE, COUNT(), SUM(), GROUP BY, aggregate functions, and percentage calculations.
+
+# Intermediate SQL Questions
+1. Calculate the number of orders per month in 2018.
+2. Find the average number of products per order, grouped by customer city.
+3. Calculate the percentage of total revenue contributed by each product category.
+4. Analyze the relationship between product price and the number of times a product has been purchased.
+5. Calculate total revenue generated by each seller and rank sellers by revenue.
+6. SQL concepts used: JOIN, GROUP BY, aggregate functions, date functions, subqueries, percentage calculations, and ranking logic.
+
+# Advanced SQL Questions
+1. Rank customers by total spending within each state.
+2. Calculate cumulative monthly sales for each year.
+3. Calculate the year-over-year growth rate of total sales.
+4. Calculate customer retention, defined as the percentage of customers who make another purchase within six months of their first purchase.
+5. Join orders and order items to analyze order-level and product-level information.
+
+## Advanced SQL concepts used:
+1. Complex joins
+2. Common Table Expressions (CTEs)
+3. Subqueries
+4. Window functions
+5. RANK()
+6. SUM() OVER()
+7. LAG()
+8. PARTITION BY
+9. Running totals
+10. Date-based calculations
+11. Customer retention analysis
+These queries support deeper analysis of customer spending, revenue trends, seller performance, and repeat purchasing behavior.
+
+  ## Python Exploratory Data Analysis (EDA)
+Python was used to explore the datasets and identify meaningful patterns in business performance.
+
+# Order Status Analysis
+Analyzed the distribution of orders across different statuses, including delivered, shipped, canceled, unavailable, invoiced, processing, created, and approved & the recorded 96,478 delivered orders in the order-status summary.
+
+# Delivery Performance Analysis
+Calculated delivery duration and compared actual delivery dates with estimated delivery dates.
+
+# The analysis included:
+1. Average delivery time.
+2. Minimum and maximum delivery duration.
+3. Average delivery delay.
+4. Number of orders delivered early or on time.
+5. Number of orders delivered late.
+6. Early/on-time and late-delivery percentages.
+
+# Observed results:
+1. Average delivery time: 12.09 days.
+2. Early/on-time delivery rate: 93.23%.
+3. Late-delivery rate: 6.77%.
+   
+# Geographical Analysis
+Analyzed the distribution of orders across customer states to identify the geographical concentration of e-commerce activity.The displayed results show São Paulo (SP) as the state with the highest order count, with 41,746 orders in the customer-state summary.
+
+# Customer Segmentation by Purchase Frequency
+
+Grouped customers according to their order counts and classified them into three segments:
+- **One-time customers:** Customers with one order.
+- **Repeat customers:** Customers with two orders.
+- **Loyal customers:** Customers with three or more orders.
+
+The displayed customer segmentation output was:
+
+| Customer Segment | Count |
+|---|---:|
+| One-time customers | 93,099 |
+| Repeat customers | 2,745 |
+| Loyal customers | 252 |
+This analysis highlights opportunities to encourage repeat purchases and strengthen customer loyalty.
+
+# Revenue Contribution by Product Category
+Aggregated order-item prices by product category to identify categories contributing the highest sales value.
+
+The top 10 categories by summed item price in the displayed output were:
+| Rank | Product Category | Summed Item Price |
+|---:|---|---:|
+| 1 | Health Beauty | 1,258,681.34 |
+| 2 | Watches Present | 1,205,005.68 |
+| 3 | Bed Table Bath | 1,036,988.68 |
+| 4 | Sport Leisure | 988,048.97 |
+| 5 | Computer Accessories | 911,954.32 |
+| 6 | Furniture Decoration | 729,762.49 |
+| 7 | Cool Stuff | 635,290.85 |
+| 8 | Housewares | 632,248.66 |
+| 9 | Automotive | 592,720.11 |
+| 10 | Garden Tools | 485,256.46 |
+
+# RFM Analysis
+Performed Recency, Frequency, and Monetary (RFM) analysis to evaluate customer purchasing behavior.
+
+# The analysis involved:
+
+- Recency: Measuring the time since a customer’s most recent purchase.
+- Frequency: Counting the customer’s orders.
+- Monetary: Calculating the customer’s purchase value.
+- Assigning scores to the three RFM dimensions.
+- Combining scores into an RFM score.
+- Creating customer segments based on RFM characteristics.
+- The customer segmentation logic included categories such as:
+
+# Champions
+- Loyal Customers
+- New/Promising Customers
+- At Risk Customers
+- Needs Attention
+- RFM analysis supports targeted marketing, customer engagement, and retention strategies.
+
+## Customer Retention and Cohort Analysis
+Performed cohort analysis to understand how customer purchasing activity changes after the first purchase.
+
+# The analysis involved:
+- Extracting customer IDs and order purchase timestamps.
+- Converting purchase timestamps into monthly periods.
+- Identifying each customer’s first purchase month.
+- Assigning customers to their first-purchase cohorts.
+- Tracking customer activity across subsequent months.
+- Calculating retention percentages.
+- Creating a heatmap to visualize cohort retention over time.
+- This analysis helps evaluate repeat-purchase behavior, compare customer cohorts, and identify opportunities to improve retention.
+  
+# Data Visualization
+The project uses visualizations to communicate patterns and trends identified during analysis.
+
+# The visual analysis includes:
+- Monthly order trends.
+- Order status distribution.
+- Payment-method distribution.
+- Top product categories.
+- Geographical order distribution.
+- Delivery-performance metrics.
+- Customer segmentation.
+- RFM customer segments.
+- Cohort retention heatmaps.
+These visualizations make the analysis easier to interpret and help translate technical findings into business insights.
+
+# Key Findings
+The analysis produced the following findings from the displayed notebook outputs and project analysis:
+
+- Delivered orders represented the largest order-status category.
+- The displayed delivery-performance calculation reported an early/on-time delivery rate of 93.23% and a late-delivery rate of 6.77%.
+- São Paulo had the highest order count in the displayed customer-state summary.
+- Most customers in the displayed purchase-frequency segmentation were one-time customers, indicating an opportunity to encourage repeat purchases.
+- Health Beauty and Watches Present ranked first and second, respectively, in the displayed product-category item-price totals.
+- RFM analysis provided a framework for identifying high-value, loyal, promising, and at-risk customers.
+- Cohort analysis provided a method for evaluating retention trends across customer groups over time.
+- Advanced SQL techniques enabled customer ranking, cumulative sales analysis, and year-over-year sales comparisons.
+  
+# Business Recommendations
+Based on the analyses, the following actions could help improve e-commerce performance:
+
+- Improve customer retention: Use targeted campaigns, relevant offers, and follow-up communication to encourage second purchases.
+- Reward loyal customers: Consider loyalty benefits and personalized offers for frequent and high-value buyers.
+- Re-engage at-risk customers: Use RFM segments to identify customers who may need targeted engagement.
+- Optimize product-category strategy: Use category-level sales analysis to inform merchandising, promotions, and inventory planning.
+- Monitor delivery performance: Track late deliveries and investigate operational causes to improve customer experience.
+- Use geographical insights: Tailor marketing and operational planning to regions with strong order activity.
+- Monitor sales growth: Use monthly cumulative sales and year-over-year growth metrics to track business performance.
+- Improve repeat purchasing: Analyze customer cohorts to identify when engagement decreases and where retention initiatives may help.
+- These are recommendations derived from the analytical opportunities identified in the project, rather than claims that the suggested business actions have already been implemented.
+
+# Demonstrated
+This project demonstrates practical experience with:
+
+- SQL querying and business problem-solving.
+- Joins across relational datasets.
+- Aggregation and grouping.
+- Date-based analysis.
+- CTEs and subqueries.
+- Window functions and ranking.
+- Running totals and growth calculations.
+- Data cleaning and quality checks.
+- Exploratory data analysis.
+- Pandas data manipulation.
+- Customer segmentation.
+- RFM analysis.
+- Cohort retention analysis.
+- Data visualization.
+- Translating analytical results into business recommendations.
+
+# Project Limitations & Considerations
+- The dataset contains historical transactions; the findings describe the available observation period rather than current market conditions.
+- Summed item prices do not represent profit because costs, returns, discounts, and other financial adjustments are not fully accounted for in that calculation.
+- Customer segmentation and retention results depend on the customer identifiers, date handling, and segment definitions used in the analysis.
+- Retention percentages should be interpreted alongside cohort size and the amount of follow-up time available to each cohort.
+- The project identifies analytical findings and potential business actions; the business impact of recommendations would require further testing.
+
+## 11. Business Recommendations
+1. **Improve customer retention:** Use relevant offers and follow-up communication to encourage second purchases.
+2. **Reward loyal customers:** Consider loyalty benefits and personalized offers for frequent and high-value buyers.
+3. **Re-engage at-risk customers:** Use RFM segments to identify customers who may benefit from targeted engagement.
+4. **Optimize product-category strategy:** Use category-level sales analysis to inform merchandising, promotions, and inventory planning.
+5. **Monitor delivery performance:** Track late deliveries and investigate operational causes to improve customer experience.
+6. **Use geographical insights:** Tailor marketing and operational planning to regions with strong order activity.
+7. **Monitor sales growth:** Use cumulative sales and year-over-year growth metrics to track business performance.
+8. **Encourage repeat purchasing:** Use cohort analysis to identify when customer engagement decreases and where retention initiatives may help.
+   
+# Conclusion
+1. This project demonstrates how SQL and Python can be combined to analyze e-commerce operations, customer purchasing behavior, product-category performance, seller revenue, delivery efficiency, and customer retention.
+2. SQL supports structured querying and advanced business calculations, while Python enables data preparation, exploratory analysis, customer segmentation, RFM scoring, cohort analysis, and visualization.
+3. Together, these techniques provide a foundation for data-driven decision-making and demonstrate practical data analytics skills relevant to business and e-commerce environments.
 
   
