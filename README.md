@@ -50,6 +50,16 @@ The project uses six interconnected datasets.
 - Converted date columns into datetime format.
 - Prepared data for joins, aggregations, and time-based analysis.
 - Integrated related datasets using identifiers such as customer ID, order ID, product ID, and seller ID.
+
+  ## Methodology
+- Data Collection: Worked with customer, order, order-item, payment, product, and seller datasets.
+- Data Preparation: Inspected dataset structures, checked missing values and duplicate records, converted date columns, and prepared data for analysis.
+- SQL Analysis: Used MySQL Workbench to perform joins, aggregations, subqueries, Common Table Expressions (CTEs), window functions, ranking, cumulative sales calculations, and year-over-   year growth analysis.
+- Python Analysis: Used Python in Google Colab for exploratory data analysis (EDA), data processing, and business calculations.
+- Data Manipulation: Used Pandas for data cleaning, transformation, merging, grouping, and aggregation.
+- Customer Analysis: Performed customer segmentation, Recency-Frequency-Monetary (RFM) analysis, and cohort retention analysis.
+- Data Visualization: Used Matplotlib and Seaborn to visualize order trends, payment methods, delivery performance, customer segments, and retention patterns.
+- Business Insights: Interpreted the analytical results and developed recommendations for customer retention, sales monitoring, and operational improvement.
   
 ## SQL Analysis
 SQL was used to answer business questions at basic, intermediate, and advanced levels.
@@ -198,16 +208,23 @@ The project uses visualizations to communicate patterns and trends identified du
 These visualizations make the analysis easier to interpret and help translate technical findings into business insights.
 
 # Key Findings
-The analysis produced the following findings from the displayed notebook outputs and project analysis:
+- Order Status: Delivered orders represented the largest category in the analyzed order-status data, with 96,478 delivered orders recorded in the notebook output.
+- Delivery Performance: The analysis reported an early/on-time delivery rate of 93.23% and a late-delivery rate of 6.77%.
+- Geographical Analysis: São Paulo had the highest order count in the analyzed customer-state summary, with 41,746 orders.
+- Payment Preferences: Credit cards were the most commonly used payment method, followed by UPI.
+- Product Categories: Bed & Bath had the highest product count among the top 10 categories examined. Health Beauty and Watches Present ranked first and second, respectively, by summed      item-price values in the displayed category analysis.
+- Customer Segmentation: The purchase-frequency analysis identified 93,099 one-time customers, 2,745 repeat customers, and 252 loyal customers.
+- RFM Analysis: Segmented customers into groups such as Champions, Loyal Customers, New/Promising Customers, At Risk Customers, and Needs Attention.
+- Customer Retention: Used cohort analysis to examine customer retention patterns over time.
+- Sales Analysis: Applied advanced SQL techniques to analyze seller revenue, cumulative monthly sales, customer spending, and year-over-year sales growth.
 
-- Delivered orders represented the largest order-status category.
-- The displayed delivery-performance calculation reported an early/on-time delivery rate of 93.23% and a late-delivery rate of 6.77%.
-- São Paulo had the highest order count in the displayed customer-state summary.
-- Most customers in the displayed purchase-frequency segmentation were one-time customers, indicating an opportunity to encourage repeat purchases.
-- Health Beauty and Watches Present ranked first and second, respectively, in the displayed product-category item-price totals.
-- RFM analysis provided a framework for identifying high-value, loyal, promising, and at-risk customers.
-- Cohort analysis provided a method for evaluating retention trends across customer groups over time.
-- Advanced SQL techniques enabled customer ranking, cumulative sales analysis, and year-over-year sales comparisons.
+# Business Impact
+- Customer Retention: Identified opportunities to encourage repeat purchases and strengthen customer loyalty.
+- Delivery Monitoring: Provided insights into delivery performance that can help businesses investigate late deliveries and potential operational issues.
+- Sales and Product Analysis: Helped identify product categories with high summed item-price values and supported further investigation of sales performance.
+- Customer Segmentation: Demonstrated how RFM analysis can help identify high-value, loyal, and potentially at-risk customers.
+- Business Decision-Making: Converted raw e-commerce data into structured findings that can support business planning and performance monitoring.
+- Analytical Skills: Demonstrated practical experience in SQL querying, Python-based data analysis, data visualization, customer segmentation, and business problem-solving.
   
 # Demonstrated
 This project demonstrates practical experience with:
@@ -250,4 +267,4 @@ This project demonstrates practical experience with:
 2. SQL supports structured querying and advanced business calculations, while Python enables data preparation, exploratory analysis, customer segmentation, RFM scoring, cohort analysis, and visualization.
 3. Together, these techniques provide a foundation for data-driven decision-making and demonstrate practical data analytics skills relevant to business and e-commerce environments.
 
-  
+# GitHub Repository Link: 
