@@ -32,7 +32,7 @@ The project uses six interconnected datasets.
 | Products | 32,951 | Product identifiers, categories, and product attributes |
 | Sellers | 3,095 | Seller identifiers and geographical information |
 
-## 5. Tools and Technologies
+## Tools and Technologies
 
 - **SQL / MySQL Workbench:** Data querying, joins, aggregations, ranking, CTEs, and analytical calculations.
 - **Python:** Data analysis and business calculations.
@@ -209,19 +209,6 @@ The analysis produced the following findings from the displayed notebook outputs
 - Cohort analysis provided a method for evaluating retention trends across customer groups over time.
 - Advanced SQL techniques enabled customer ranking, cumulative sales analysis, and year-over-year sales comparisons.
   
-# Business Recommendations
-Based on the analyses, the following actions could help improve e-commerce performance:
-
-- Improve customer retention: Use targeted campaigns, relevant offers, and follow-up communication to encourage second purchases.
-- Reward loyal customers: Consider loyalty benefits and personalized offers for frequent and high-value buyers.
-- Re-engage at-risk customers: Use RFM segments to identify customers who may need targeted engagement.
-- Optimize product-category strategy: Use category-level sales analysis to inform merchandising, promotions, and inventory planning.
-- Monitor delivery performance: Track late deliveries and investigate operational causes to improve customer experience.
-- Use geographical insights: Tailor marketing and operational planning to regions with strong order activity.
-- Monitor sales growth: Use monthly cumulative sales and year-over-year growth metrics to track business performance.
-- Improve repeat purchasing: Analyze customer cohorts to identify when engagement decreases and where retention initiatives may help.
-- These are recommendations derived from the analytical opportunities identified in the project, rather than claims that the suggested business actions have already been implemented.
-
 # Demonstrated
 This project demonstrates practical experience with:
 
@@ -241,7 +228,7 @@ This project demonstrates practical experience with:
 - Data visualization.
 - Translating analytical results into business recommendations.
 
-# Project Limitations & Considerations
+# Project Limitations 
 - The dataset contains historical transactions; the findings describe the available observation period rather than current market conditions.
 - Summed item prices do not represent profit because costs, returns, discounts, and other financial adjustments are not fully accounted for in that calculation.
 - Customer segmentation and retention results depend on the customer identifiers, date handling, and segment definitions used in the analysis.
