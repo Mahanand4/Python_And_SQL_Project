@@ -252,7 +252,7 @@ This project demonstrates practical experience with:
 - Retention percentages should be interpreted alongside cohort size and the amount of follow-up time available to each cohort.
 - The project identifies analytical findings and potential business actions; the business impact of recommendations would require further testing.
 
-## 11. Business Recommendations
+## Business Recommendations
 1. **Improve customer retention:** Use relevant offers and follow-up communication to encourage second purchases.
 2. **Reward loyal customers:** Consider loyalty benefits and personalized offers for frequent and high-value buyers.
 3. **Re-engage at-risk customers:** Use RFM segments to identify customers who may benefit from targeted engagement.
