@@ -41,7 +41,7 @@ The project uses six interconnected datasets.
 - **Seaborn:** Statistical visualizations and retention heatmaps.
 - **Google Colab:** Python notebook execution and analysis.
 - **Excel and CSV files:** Source data.
-- 
+  
 ## Data Preparation 
 - Loaded customer, order, order-item, payment, product, and seller datasets.
 - Inspected dataset dimensions and column names.
@@ -226,7 +226,7 @@ These visualizations make the analysis easier to interpret and help translate te
 - Business Decision-Making: Converted raw e-commerce data into structured findings that can support business planning and performance monitoring.
 - Analytical Skills: Demonstrated practical experience in SQL querying, Python-based data analysis, data visualization, customer segmentation, and business problem-solving.
   
-# Demonstrated
+# Skills Demonstrated
 This project demonstrates practical experience with:
 
 - SQL querying and business problem-solving.
